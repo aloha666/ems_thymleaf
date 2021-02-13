@@ -44,7 +44,7 @@
 						Age
 					</td>
 					<td>
-						Birthdate
+						Bir
 					</td>
 					<td>
 						Operation
@@ -68,7 +68,7 @@
 						<span th:text="${#dates.format(emp.bir,'yyyy-MM-dd')}"/>
 					</td>
 					<td>
-						<a th:href="@{/emp/delete(id=${emp.id})}">delete emp</a>&nbsp;
+						<a th:href="@{/emp/delete(id=${emp.id})}">delete emp</a>
 						<a th:href="@{/emp/find(id=${emp.id})}">update emp</a>
 					</td>
 				</tr>

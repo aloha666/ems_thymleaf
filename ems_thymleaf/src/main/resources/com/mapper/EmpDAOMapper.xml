@@ -14,4 +14,14 @@
         where id = #{id}
     </select>
 
+    <select id ="find" resultType="com.springb.entity.Emp">
+        select id,name,salary,age,bir from t_emp
+        where id = #{id}
+    </select>
+
+    <select id ="delete" parameterType="String">
+        delete from t_emp
+        where id = #{id}
+    </select>
+
 </mapper>

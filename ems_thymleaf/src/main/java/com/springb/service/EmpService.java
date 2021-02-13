@@ -10,4 +10,6 @@ public interface EmpService {
     List<Emp> findAll();
     void save(Emp emp);
     void update(Emp emp);
+    Emp find(String id);
+    void delete(String id);
 }

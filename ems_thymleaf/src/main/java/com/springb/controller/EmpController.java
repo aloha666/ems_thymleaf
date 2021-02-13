@@ -46,7 +46,22 @@ public class EmpController {
         return "ems/emplist";
     }
 
-    //return all
+    //delete
+    @GetMapping("/delete")
+    public String delete(String id, Model model){
+        empService.delete(id);
+       // model.addAttribute("emp",emp);
+        return "redirect:/emp/findAll";
+    }
+    //find
+    @GetMapping("/find")
+    public String find(String id, Model model){
+        Emp emp = empService.find(id);
+        model.addAttribute("emp",emp);
+        return "/ems/updateEmp";
+    }
+
+    //update
     @PostMapping("/update")
     public String update(Emp emp){
         empService.update(emp);

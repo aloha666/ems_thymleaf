@@ -9,6 +9,8 @@ public interface EmpDAO {
 
     void save (Emp emp);
     void update(Emp emp);
+    void delete(String id);
+    Emp find(String id);
 
 
 }

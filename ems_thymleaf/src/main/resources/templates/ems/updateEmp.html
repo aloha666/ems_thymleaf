@@ -13,7 +13,7 @@
 					<div id="header">
 						<div id="rightheader">
 							<p>
-								2009/11/20
+								<script> document.write(new Date().toLocaleDateString()); </script>
 								<br />
 							</p>
 						</div>
@@ -31,7 +31,7 @@
 					<h1>
 						update Emp info:
 					</h1>
-					<form action="emplist.html" method="post">
+					<form th:action="@{/emp/update}" method="post">
 						<table cellpadding="0" cellspacing="0" border="0"
 							class="form_table">
 							<tr>
@@ -39,7 +39,8 @@
 									id:
 								</td>
 								<td valign="middle" align="left">
-									1
+									<span th:text="${emp.id}"/>
+									<input type="hidden" th:value="${emp.id}" name="id">
 								</td>
 							</tr>
 							<tr>
@@ -47,7 +48,7 @@
 									name:
 								</td>
 								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="name" value="zhangshan"/>
+									<input type="text" class="inputgri" name="name" th:value="${emp.name}"/>
 								</td>
 							</tr>
 							<tr>
@@ -55,7 +56,7 @@
 									salary:
 								</td>
 								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="salary" value="20000"/>
+									<input type="text" class="inputgri" name="salary" th:value="${emp.salary}"/>
 								</td>
 							</tr>
 							<tr>
@@ -63,9 +64,19 @@
 									age:
 								</td>
 								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="age" value="20"/>
+									<input type="text" class="inputgri" name="age" th:value="${emp.age}"/>
 								</td>
 							</tr>
+
+							<tr>
+								<td valign="middle" align="right">
+									bir
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" name="bir" th:value="${#dates.format(emp.bir,'yyyy/MM/dd')}"/>
+								</td>
+							</tr>
+
 						</table>
 						<p>
 							<input type="submit" class="button" value="Confirm" />
