@@ -3,11 +3,13 @@
 <mapper namespace="com.springb.dao.UserDAO">
        <!--create-->
     <insert id="save" parameterType="com.springb.entity.User" >
-        insert into t_user values(#{id},#{username},#{realname},#{password},#{sex})
+        insert into t_user
+        values(#{id},#{username},#{realname},#{password},#{sex})
     </insert>
 
     <select id ="login" resultType="com.springb.entity.User">
-        select id,username,realname,password,sex from t_user
+        select id,username,realname,password,sex
+        from t_user
         where username = #{username} and password = #{password}
     </select>
 </mapper>

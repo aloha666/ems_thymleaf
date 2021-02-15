@@ -43,7 +43,7 @@ public class ValidateImageCodeUtils {
         int n = codes.length;
 
         if (len > n && isCanRepeat == false) {
-            throw new RuntimeException(String.format("调用SecurityCode.getSecurityCode(%1$s,%2$s,%3$s)出现异常，" + "当isCanRepeat为%3$s时，传入参数%1$s不能大于%4$s", len, level, isCanRepeat, n));
+            throw new RuntimeException(String.format("Exception:SecurityCode.getSecurityCode(%1$s,%2$s,%3$s)", len, level, isCanRepeat, n));
         }
 
         char[] result = new char[len];
