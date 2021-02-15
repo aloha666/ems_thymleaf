@@ -27,14 +27,14 @@
 					<p id="whereami">
 					</p>
 					<h1>
-						注册
+						Register
 					</h1>
 					<form th:action="@{/user/register}" method="post">
 						<table cellpadding="0" cellspacing="0" border="0"
 							class="form_table">
 							<tr>
 								<td valign="middle" align="right">
-									用户名:
+									Username:
 								</td>
 								<td valign="middle" align="left">
 									<input type="text" class="inputgri" name="username" />
@@ -42,7 +42,7 @@
 							</tr>
 							<tr>
 								<td valign="middle" align="right">
-									真实姓名:
+									Realname:
 								</td>
 								<td valign="middle" align="left">
 									<input type="text" class="inputgri" name="realname" />
@@ -50,7 +50,7 @@
 							</tr>
 							<tr>
 								<td valign="middle" align="right">
-									密码:
+									Password:
 								</td>
 								<td valign="middle" align="left">
 									<input type="password" class="inputgri" name="password" />
@@ -58,21 +58,21 @@
 							</tr>
 							<tr>
 								<td valign="middle" align="right">
-									性别:
+									Sex:
 								</td>
 								<td valign="middle" align="left">
-									男
+									Male
 									<input type="radio" class="inputgri" name="sex" value="male" checked="checked"/>
-									女
+									Female
 									<input type="radio" class="inputgri" name="sex" value="female"/>
 								</td>
 							</tr>
 							
 							<tr>
 								<td valign="middle" align="right">
-									验证码:
+									Verify:
 									<img id="num" th:src="@{/user/code}" />
-									<a href="javascript:;" onclick="document.getElementById('num').src = '/ems/user/code?'+(new Date()).getTime()">换一张</a>
+									<a href="javascript:;" onclick="document.getElementById('num').src = '/ems/user/code?'+(new Date()).getTime()">change</a>
 								</td>
 								<td valign="middle" align="left">
 									<input type="text" class="inputgri" name="code" />
@@ -87,7 +87,7 @@
 			</div>
 			<div id="footer">
 				<div id="footer_bg">
-				ABC@126.com
+				ABC@gmail.com
 				</div>
 			</div>
 		</div>

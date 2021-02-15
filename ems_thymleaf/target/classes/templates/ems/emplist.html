@@ -11,7 +11,7 @@
 		<div id="header">
 			<div id="rightheader">
 				<p>
-					2009/11/20
+					<script> document.write(new Date().toLocaleDateString()); </script>
 					<br />
 				</p>
 			</div>
@@ -28,6 +28,7 @@
 			</p>
 			<h1>
 				Welcome <span th:text="${session.user.username}"/>!
+
 			</h1>
 			<table class="table">
 				<tr class="table_header">
@@ -76,12 +77,14 @@
 			</table>
 			<p>
 				<input type="button" class="button" value="Add Employee" onclick="location.href='/ems/toSave'"/>
+				<input type="button" class="button" value="Logout" onclick="location.href='/ems/index'"/>
+
 			</p>
 		</div>
 	</div>
 	<div id="footer">
 		<div id="footer_bg">
-			ABC@126.com
+			ABC@gmail.com
 		</div>
 	</div>
 </div>
