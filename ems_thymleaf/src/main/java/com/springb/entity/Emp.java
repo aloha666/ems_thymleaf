@@ -16,6 +16,6 @@ public class Emp {
     private String id;
     private String name;
     private Double salary;
-    private int age;
+    private int workyear;
     private Date bir;
 }
