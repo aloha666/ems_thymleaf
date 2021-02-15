@@ -44,10 +44,13 @@ public class UserController {
     private void getImage(HttpSession session, HttpServletResponse response) throws IOException {
         //generate code
         String securitycode = ValidateImageCodeUtils.getSecurityCode();
+        //generate code
         BufferedImage image = ValidateImageCodeUtils.createImage(securitycode);
+        //set code into seesion
         session.setAttribute("code", securitycode);
-        //response image
+        //use response to output image
         ServletOutputStream os = response.getOutputStream();
+        //use ImageIO utility class to output
         ImageIO.write(image,"png",os);
 
     }

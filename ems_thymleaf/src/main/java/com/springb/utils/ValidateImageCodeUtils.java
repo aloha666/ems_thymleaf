@@ -103,8 +103,6 @@ public class ValidateImageCodeUtils {
 
         g.drawRect(0, 0, width-1, height-1);
 
-        //绘制噪点
-
         Random rand = new Random();
 
         g.setColor(Color.LIGHT_GRAY);
